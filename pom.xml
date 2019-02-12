@@ -55,7 +55,7 @@
                     <processTypes>
                         <!-- Tell Heroku how to launch your application -->
                         <!-- You might have to remove the ./ in front   -->
-                        <web>java -jar target/calculadoraparcial-1.0-SNAPSHOT.jar</web>
+                        <web>java -cp $JAVA_OPTS -jar target/calculadoraparcial-1.0-SNAPSHOT.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>
