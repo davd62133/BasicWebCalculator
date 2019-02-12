@@ -32,9 +32,9 @@
         <version>0.4.4</version>
         <configuration>
           <jdkVersion>1.8</jdkVersion>
-          <appName>estadisticaarep</appName>
+          <appName>arep-parcial20191</appName>
           <processTypes>
-            <web>java -jar target/taller1-1.0-SNAPSHOT.jar</web>
+            <web>java -jar target/calculadoraparcial-1.0-SNAPSHOT.jar</web>
           </processTypes>
         </configuration>
       </plugin>
