@@ -25,18 +25,13 @@ public class Main {
                 for(String s : request.queryParams("uploadText").split(";")){
                     nums.add(Double.parseDouble(s));
                 }
-                JSON.list = nums;
-                JSON.max = max(nums);
-                JSON.min = min(nums);
-                JSON.sum = sum(nums);
-                JSON.mult = mult(nums);
                 html +=
-                        "Datos ingresados: " + JSON.list + "<p>"
-                                +"El maximo de los datos es: " + JSON.max + "<p>"
-                                +"El minimo de los datos es: " + JSON.min + "<p>"
-                                +"La sumatoria de los datos es: " + JSON.sum + "<p>"
-                                +"La multiplicación de los datos es: " + JSON.mult + "<p>"
-                                +"El JSON es: " + JSON.getJSON() + "<p>"
+                        "Datos ingresados: " + nums + "<p>"
+                                +"El maximo de los datos es: " + max(nums) + "<p>"
+                                +"El minimo de los datos es: " + min(nums) + "<p>"
+                                +"La sumatoria de los datos es: " + sum(nums) + "<p>"
+                                +"La multiplicación de los datos es: " + mult(nums) + "<p>"
+                                +"El JSON es: " + getJSON(nums) + "<p>"
                                 +"<a href=\"/\"><button>Volver</button></a>"
                                 +"</body>"
                                 +"</html>";
@@ -137,26 +132,17 @@ public class Main {
         return mult;
     }
 
-}
-
-class JSON {
-    public static Double max;
-    public static Double min;
-    public static Double sum;
-    public static Double mult;
-    public static LinkedList<Double> list;
-
-
-
-    public static String getJSON() {
+    public static String getJSON(LinkedList<Double> nums) {
         String temp =
                 "{"+
-                        "max : " + max +
-                        ", min : " + min +
-                        ", sum : " + sum +
-                        ", mult : " + mult +
-                        ", list : " + list +
+                        "max : " + max(nums) +
+                        ", min : " + max(nums) +
+                        ", sum : " + max(nums) +
+                        ", mult : " + mult(nums) +
+                        ", list : " + nums +
                         "}";
         return temp;
     }
+
+
 }
